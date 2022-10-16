@@ -26,8 +26,9 @@ jobs:
       run: mvn clean install
 
     - name: Build & Push the docker images
-      uses: kamalesreekanth123/docker-build-push@v5
+      uses: kamalesreekanth123/docker-build-push@v5hg
       with:
+         image: kamalesreekanth123/springboot-images-new
          tags: latest
          registry: docker.io
          dockerfile: Dockerfile
